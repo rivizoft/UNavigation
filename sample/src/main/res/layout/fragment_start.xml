@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.chooser.StartFragment"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16sp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16sp" />
+
+    <Button
+        android:id="@+id/button_go_counter_screen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Пойти на счетчик"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button_main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_go_text_screen"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+    <Button
+        android:id="@+id/button_go_text_screen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Пойти на текстовый"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button_main"
+        app:layout_constraintTop_toBottomOf="@id/button_go_counter_screen"
+        app:layout_constraintBottom_toTopOf="@id/button_go_map"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+    <Button
+        android:id="@+id/button_go_map"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Пойти на карту"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button_main"
+        app:layout_constraintTop_toBottomOf="@id/button_go_text_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,3 @@
+include ':unav'
+include ':sample'
+rootProject.name = "MyNavigation"

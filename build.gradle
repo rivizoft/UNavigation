@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.30"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url = uri("https://maven.pkg.jetbrains.space/ustaff/p/udelivery-android/udelivery-modules")
+            credentials {
+                username = "rivizoft"
+                password = "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJRZVBHSTBMTk45dyIsImF1ZCI6ImNpcmNsZXQtd2ViLXVpIiwib3JnRG9tYWluIjoidXN0YWZmIiwibmFtZSI6InJpdml6b2Z0IiwiaXNzIjoiaHR0cHM6XC9cL2pldGJyYWlucy5zcGFjZSIsInBlcm1fdG9rZW4iOiIyNXJJa04yOE5sdXQiLCJwcmluY2lwYWxfdHlwZSI6IlVTRVIiLCJpYXQiOjE2MTAzOTEyNDN9.X9J4SJZJdwtAu9oa8ack_7B3GNA9lgjERKybK7uxEy9LrZfUBa2F-F6fe2YxD5OBL6AHvpNwHNDx0jkfTWctIUFMimbMxmh_1tq2x-K-fBDngW3AnsNSt4JbiAikHd-GO2Y524iFf1pQLz_wDFiuAEt-JCkLPdXJ8a5cBe_TsUo"
+            }
+        }
+        maven {
+            url "https://dl.bintray.com/2gis/maven"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
